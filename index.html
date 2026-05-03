@@ -6,19 +6,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="os-container">
-        <!-- Masaüstü Alanı -->
-        <div id="desktop">
-            <div class="icon" onclick="openApp('terminal')">🖥️ Terminal</div>
-            <div class="icon" onclick="openApp('snake')">🐍 Yılan Oyunu</div>
+    <!-- 1. Kurulum ve Boot Ekranı -->
+    <div id="boot-screen">
+        <div class="logo-container">
+            <div class="spinner"></div>
+            <img src="https://i.imgur.com/yourlogo.png" alt="NovaOS Logo" class="boot-logo">
         </div>
-        
+        <p>NovaOS Hazırlanıyor...</p>
+    </div>
+
+    <!-- 2. Ana Masaüstü -->
+    <div id="desktop" style="display:none;">
+        <div class="icons">
+            <div class="icon" onclick="openApp('explorer')">📂 Dosya Gezgini</div>
+            <div class="icon" onclick="openApp('nuriweb')">🌐 NuriWeb</div>
+            <div class="icon" onclick="openApp('settings')">⚙️ Ayarlar</div>
+        </div>
+
         <!-- Görev Çubuğu -->
         <div id="taskbar">
-            <button id="start-btn">BAŞLAT</button>
+            <div id="start-btn">⭐</div> <!-- Senin logon buraya -->
+            <div id="active-apps"></div>
             <div id="clock"></div>
         </div>
     </div>
+
+    <!-- Uygulama Pencereleri Taslağı -->
+    <div id="window-layer"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
