@@ -1,1 +1,1 @@
-# NovaOS-v26
+https://teyekyusuf40-pixel.github.io/NovaOS-v26/
